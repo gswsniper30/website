@@ -1,49 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mikey</title>
-  <meta name="description" content="Personal site for mikey.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+SC:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=r3">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mikey</title>
+  <meta name="description" content="Mikey (gswsniper30) - history lover, road trip enjoyer, sports fan, and explorer. China to Canada, based in the Toronto / Markham area." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="cover-page">
-  <div class="intro-loader" aria-hidden="true">
-    <div class="intro-loader__mark"></div>
-    <div class="intro-loader__bar"></div>
-    <div class="intro-loader__counter">000</div>
-  </div>
+<body>
+  <a class="skip-link" href="#about" data-en="Skip to content" data-cn="跳到内容">Skip to content</a>
 
-  <main class="cover">
-    <div class="cover-meta" aria-label="Cover details">
-      <span>mikey</span>
-      <span class="cover-handle">gswsniper30</span>
-      <span class="local-time" data-time>--:--:-- ET</span>
+  <!-- header -->
+  <header class="nav">
+    <a class="nav__brand" href="#top">mikey</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#about" data-en="About" data-cn="关于">About</a>
+      <a href="#history" data-en="History" data-cn="历史">History</a>
+      <a href="#travel" data-en="Travel" data-cn="旅行">Travel</a>
+      <a href="#sports" data-en="Sports" data-cn="运动">Sports</a>
+      <a href="#music" data-en="Music" data-cn="音乐">Music</a>
+      <a href="#setup" data-en="Setup" data-cn="装备">Setup</a>
+      <a href="#photos" data-en="Photos" data-cn="照片">Photos</a>
+      <a href="#faq" data-en="FAQ" data-cn="问答">FAQ</a>
+      <a href="#contact" data-en="Contact" data-cn="联系">Contact</a>
+    </nav>
+    <div class="nav__tools">
+      <span class="clock" data-time aria-label="Eastern Time">--:-- ET</span>
+      <button class="tool-btn" type="button" data-lang aria-label="Switch language">中文</button>
+      <button class="tool-btn tool-btn--icon" type="button" data-theme aria-label="Switch theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
     </div>
+  </header>
 
-    <section class="cover-stage" aria-label="Enter mikey site">
-      <div class="cover-motion" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
+  <main id="top">
+    <!-- hero -->
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <svg class="hero__map" aria-hidden="true" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+        <path d="M-50 180 Q300 80 650 200 T1250 160" />
+        <path d="M-50 360 Q350 460 720 320 T1250 400" />
+        <path d="M-50 520 Q400 420 800 540 T1250 500" />
+        <circle cx="250" cy="150" r="4"/><circle cx="930" cy="240" r="4"/>
+        <circle cx="600" cy="470" r="4"/><circle cx="1040" cy="430" r="4"/>
+      </svg>
+
+      <div class="hero__inner">
+        <h1 class="hero__title" data-en="Hi, my name is Mikey." data-cn="嗨，我叫 Mikey。">Hi, my name is Mikey.</h1>
+        <p class="hero__sub" data-en="History lover, road trip enjoyer, sports fan, and explorer." data-cn="历史爱好者，公路旅行迷，体育迷，还是个探索者。">History lover, road trip enjoyer, sports fan, and explorer.</p>
+
+        <ul class="chips" aria-label="Quick facts">
+          <li class="chip"><span data-en="China &rarr; Canada" data-cn="中国 &rarr; 加拿大">China &rarr; Canada</span></li>
+          <li class="chip"><span data-en="English / Mandarin" data-cn="英语 / 中文">English / Mandarin</span></li>
+          <li class="chip"><span data-en="Eastern Time" data-cn="东部时间">Eastern Time</span></li>
+          <li class="chip"><span data-en="Toronto / Markham" data-cn="多伦多 / 万锦">Toronto / Markham</span></li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#about" data-en="About me" data-cn="关于我">About me</a>
+          <a class="btn btn--ghost" href="#contact" data-en="Get in touch" data-cn="联系我">Get in touch</a>
+        </div>
       </div>
-      <p class="cover-kicker">personal archive · 2026</p>
-      <h1>mikey</h1>
-      <p class="cover-cn">gswsniper30 / toronto</p>
-      <a class="enter-link" href="about.html" data-enter>
-        <span data-en="Enter the archive" data-cn="进入档案">Enter the archive</span>
-        <span>01</span>
-        <span class="arrow">→</span>
-      </a>
     </section>
 
-    <div class="cover-ticker" aria-hidden="true">
-      <span>personal archive · toronto · gswsniper30 · history · sports · music · travel · food · 2026 · </span>
-      <span>personal archive · toronto · gswsniper30 · history · sports · music · travel · food · 2026 · </span>
-    </div>
+    <!-- quick stats -->
+    <section class="stats" aria-label="Quick stats">
+      <div class="stat">
+        <span class="stat__num">2</span>
+        <span class="stat__label" data-en="Languages" data-cn="种语言">Languages</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">3</span>
+        <span class="stat__label" data-en="Favourite sports" data-cn="项最爱运动">Favourite sports</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">ET</span>
+        <span class="stat__label" data-en="Timezone" data-cn="时区">Timezone</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num stat__num--word" data-en="Always" data-cn="一直">Always</span>
+        <span class="stat__label" data-en="Exploring" data-cn="在探索">Exploring</span>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="section" id="about">
+      <div class="about">
+        <div class="about__card reveal">
+          <div class="avatar" aria-hidden="true">M</div>
+          <p class="kicker" data-en="About me" data-cn="关于我">About me</p>
+          <h2 data-en="From Nanjing to Canada." data-cn="从南京到加拿大。">From Nanjing to Canada.</h2>
+          <p class="about__bio" data-en="I'm from China and now live in Canada. I'm a bilingual student who loves history, road trips, food, and sports. I'm optimistic and social, and I'm always up for exploring somewhere new." data-cn="我来自中国，现在住在加拿大。我是一名双语学生，喜欢历史、公路旅行、美食和运动。我乐观、爱社交，永远准备好去探索新地方。">I'm from China and now live in Canada. I'm a bilingual student who loves history, road trips, food, and sports. I'm optimistic and social, and I'm always up for exploring somewhere new.</p>
+          <ul class="traits" aria-label="Personality">
+            <li data-en="friendly" data-cn="友好">friendly</li>
+            <li data-en="curious" data-cn="好奇">curious</li>
+            <li data-en="sporty" data-cn="爱运动">sporty</li>
+            <li data-en="social" data-cn="爱社交">social</li>
+            <li data-en="adventurous" data-cn="爱冒险">adventurous</li>
+            <li data-en="chill" data-cn="松弛">chill</li>
+          </ul>
+        </div>
+        <div class="about__facts">
+          <div class="fact reveal">
+            <span class="fact__label" data-en="Based in" data-cn="现居">Based in</span>
+            <span class="fact__value" data-en="Toronto / Markham, Canada" data-cn="加拿大 多伦多 / 万锦">Toronto / Markham, Canada</span>
+          </div>
+          <div class="fact reveal">
+            <span class="fact__label" data-en="From" data-cn="来自">From</span>
+            <span class="fact__value" data-en="Nanjing, Jiangsu, China" data-cn="中国 江苏 南京">Nanjing, Jiangsu, China</span>
+          </div>
+          <div class="fact reveal">
+            <span class="fact__label" data-en="Speaks" data-cn="语言">Speaks</span>
+            <span class="fact__value" data-en="English &amp; Mandarin" data-cn="英语 和 中文">English &amp; Mandarin</span>
+          </div>
+          <div class="fact reveal">
+            <span class="fact__label" data-en="Into" data-cn="喜欢">Into</span>
+            <span class="fact__value" data-en="History, travel, food, sports" data-cn="历史、旅行、美食、运动">History, travel, food, sports</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- history -->
+    <section class="section" id="history">
+      <div class="section__head reveal">
+        <p class="kicker" data-en="Why I love history" data-cn="我为什么爱历史">Why I love history</p>
+        <h2 data-en="The past is still everywhere." data-cn="过去无处不在。">The past is still everywhere.</h2>
+        <p class="section__lead" data-en="I love learning how the past connects to the world today. Different countries, cultures, and big moments all leave traces you can still see now." data-cn="我喜欢了解过去与今天的世界如何相连。不同的国家、文化和重大时刻，都留下了今天仍能看到的痕迹。">I love learning how the past connects to the world today. Different countries, cultures, and big moments all leave traces you can still see now.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <span class="timeline__era" data-en="Ancient world" data-cn="远古时代">Ancient world</span>
+          <p class="timeline__text" data-en="Early dynasties and empires where so many ideas started." data-cn="早期的王朝与帝国，许多思想从这里开始。">Early dynasties and empires where so many ideas started.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <span class="timeline__era" data-en="Classical era" data-cn="古典时代">Classical era</span>
+          <p class="timeline__text" data-en="Rome, roads, and law that still shape how cities work." data-cn="罗马、道路和法律，至今仍影响着城市的运作方式。">Rome, roads, and law that still shape how cities work.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <span class="timeline__era" data-en="Modern history" data-cn="近代史">Modern history</span>
+          <p class="timeline__text" data-en="World wars and the modern map we live on today." data-cn="世界大战，以及我们今天所处的现代世界格局。">World wars and the modern map we live on today.</p>
+        </li>
+      </ol>
+
+      <div class="cards-3">
+        <article class="topic reveal">
+          <h3 data-en="Ancient China" data-cn="古代中国">Ancient China</h3>
+          <p data-en="Dynasties, inventions, and ideas that still shape the world." data-cn="王朝、发明与思想，至今仍在塑造着世界。">Dynasties, inventions, and ideas that still shape the world.</p>
+        </article>
+        <article class="topic reveal">
+          <h3 data-en="World War II" data-cn="第二次世界大战">World War II</h3>
+          <p data-en="How one conflict reshaped borders, alliances, and modern life." data-cn="一场冲突如何重塑了边界、同盟与现代生活。">How one conflict reshaped borders, alliances, and modern life.</p>
+        </article>
+        <article class="topic reveal">
+          <h3 data-en="Roman Empire" data-cn="罗马帝国">Roman Empire</h3>
+          <p data-en="Roads, law, and language that echo across centuries." data-cn="道路、法律与语言，回响了数个世纪。">Roads, law, and language that echo across centuries.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- travel & food -->
+    <section class="section" id="travel">
+      <div class="section__head reveal">
+        <p class="kicker" data-en="Travel &amp; food" data-cn="旅行与美食">Travel &amp; food</p>
+        <h2 data-en="New places, new food, new memories." data-cn="新的地方，新的食物，新的回忆。">New places, new food, new memories.</h2>
+        <p class="section__lead" data-en="Road trips, new cities, and trying different food with friends and family. Here's what I'm into and where I want to go next." data-cn="公路旅行、新的城市，和朋友家人一起尝不同的美食。这些是我喜欢的，还有接下来想去的地方。">Road trips, new cities, and trying different food with friends and family. Here's what I'm into and where I want to go next.</p>
+      </div>
+
+      <div class="travel">
+        <div class="travel__grid">
+          <article class="tcard reveal">
+            <span class="tcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-4l2-5h11l4 5v4h-2"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/></svg>
+            </span>
+            <h3 data-en="Road trips" data-cn="公路旅行">Road trips</h3>
+            <p data-en="Long drives, good playlists, and random stops." data-cn="长途驾驶、好听的歌单，还有随性的停留。">Long drives, good playlists, and random stops.</p>
+          </article>
+          <article class="tcard reveal">
+            <span class="tcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-5h6v5"/></svg>
+            </span>
+            <h3 data-en="New cities" data-cn="新城市">New cities</h3>
+            <p data-en="Walking around somewhere I've never been before." data-cn="在从没去过的地方四处走走。">Walking around somewhere I've never been before.</p>
+          </article>
+          <article class="tcard reveal">
+            <span class="tcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18M17 3c-1.5 0-3 1.5-3 5s1.5 4 3 4v9"/></svg>
+            </span>
+            <h3 data-en="Trying new food" data-cn="尝新的美食">Trying new food</h3>
+            <p data-en="Different kinds of food is half the reason I travel." data-cn="不同的美食，是我旅行一半的理由。">Different kinds of food is half the reason I travel.</p>
+          </article>
+          <article class="tcard reveal">
+            <span class="tcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.8M3 21v-2a4 4 0 0 1 3-3.8"/></svg>
+            </span>
+            <h3 data-en="Friends &amp; family" data-cn="朋友与家人">Friends &amp; family</h3>
+            <p data-en="The best trips are the ones with people I like." data-cn="最棒的旅行，是和喜欢的人一起。">The best trips are the ones with people I like.</p>
+          </article>
+        </div>
+
+        <aside class="travel__map reveal">
+          <p class="kicker" data-en="Places &amp; routes" data-cn="地点与路线">Places &amp; routes</p>
+          <svg class="mapviz" aria-hidden="true" viewBox="0 0 360 200">
+            <path class="mapviz__arc" d="M70 120 Q180 20 290 90" />
+            <g class="mapviz__pin"><circle cx="70" cy="120" r="5"/><text x="70" y="142">Nanjing</text></g>
+            <g class="mapviz__pin"><circle cx="110" cy="135" r="4"/><text x="110" y="156">Shanghai</text></g>
+            <g class="mapviz__pin"><circle cx="95" cy="95" r="4"/><text x="95" y="84">Beijing</text></g>
+            <g class="mapviz__pin"><circle cx="290" cy="90" r="5"/><text x="290" y="76">Toronto</text></g>
+            <g class="mapviz__pin"><circle cx="315" cy="100" r="4"/><text x="315" y="120">Markham</text></g>
+          </svg>
+          <ul class="placetags">
+            <li data-en="Canada" data-cn="加拿大">Canada</li>
+            <li data-en="China" data-cn="中国">China</li>
+            <li data-en="Toronto" data-cn="多伦多">Toronto</li>
+            <li data-en="Markham" data-cn="万锦">Markham</li>
+            <li data-en="Nanjing" data-cn="南京">Nanjing</li>
+            <li data-en="Shanghai" data-cn="上海">Shanghai</li>
+            <li data-en="Beijing" data-cn="北京">Beijing</li>
+          </ul>
+          <p class="travel__next" data-en="Next up: more road trips and a few new countries." data-cn="接下来：更多公路旅行，还有几个新国家。">Next up: more road trips and a few new countries.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- sports -->
+    <section class="section section--court" id="sports">
+      <div class="section__head reveal">
+        <p class="kicker" data-en="Sports" data-cn="运动">Sports</p>
+        <h2 data-en="The players I look up to." data-cn="我敬佩的运动员。">The players I look up to.</h2>
+        <p class="section__lead" data-en="I play basketball, badminton, and table tennis. These are the athletes I love to watch." data-cn="我打篮球、羽毛球和乒乓球。这些是我最爱看的运动员。">I play basketball, badminton, and table tennis. These are the athletes I love to watch.</p>
+      </div>
+
+      <div class="cards-3 athletes">
+        <article class="athlete reveal">
+          <span class="athlete__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5 5c3 3 4 9 2 14M19 5c-3 3-4 9-2 14"/></svg>
+          </span>
+          <span class="athlete__sport" data-en="Basketball" data-cn="篮球">Basketball</span>
+          <h3>Stephen Curry</h3>
+          <p data-en="The shooter who changed how the game is played." data-cn="改变了比赛打法的神射手。">The shooter who changed how the game is played.</p>
+        </article>
+
+        <article class="athlete reveal">
+          <span class="athlete__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-9 9-4-4z"/><circle cx="6" cy="18" r="3"/><path d="M8.2 15.8 12 12"/></svg>
+          </span>
+          <span class="athlete__sport" data-en="Badminton" data-cn="羽毛球">Badminton</span>
+          <h3>Lin Dan</h3>
+          <p data-en="Two-time Olympic champion and a true legend." data-cn="两届奥运冠军，真正的传奇。">Two-time Olympic champion and a true legend.</p>
+        </article>
+
+        <article class="athlete reveal">
+          <span class="athlete__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-9 9-4-4z"/><circle cx="6" cy="18" r="3"/><path d="M8.2 15.8 12 12"/></svg>
+          </span>
+          <span class="athlete__sport" data-en="Badminton" data-cn="羽毛球">Badminton</span>
+          <h3>Viktor Axelsen</h3>
+          <p data-en="Powerful, precise, and dominant on court." data-cn="力量、精准，赛场上的统治者。">Powerful, precise, and dominant on court.</p>
+        </article>
+
+        <article class="athlete reveal">
+          <span class="athlete__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="11" cy="11" rx="6" ry="6"/><path d="M15.5 15.5 21 21"/><circle cx="18.5" cy="6.5" r="1.6"/></svg>
+          </span>
+          <span class="athlete__sport" data-en="Table tennis" data-cn="乒乓球">Table tennis</span>
+          <h3>Ma Long</h3>
+          <p data-en="The GOAT of table tennis, calm under pressure." data-cn="乒乓球史上的最强者，压力下依旧冷静。">The GOAT of table tennis, calm under pressure.</p>
+        </article>
+
+        <article class="athlete reveal">
+          <span class="athlete__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="11" cy="11" rx="6" ry="6"/><path d="M15.5 15.5 21 21"/><circle cx="18.5" cy="6.5" r="1.6"/></svg>
+          </span>
+          <span class="athlete__sport" data-en="Table tennis" data-cn="乒乓球">Table tennis</span>
+          <h3>Fan Zhendong</h3>
+          <p data-en="Fast, explosive, and fun to watch." data-cn="快速、爆发力强，看着就过瘾。">Fast, explosive, and fun to watch.</p>
+        </article>
+
+        <article class="athlete athlete--me reveal">
+          <span class="athlete__sport" data-en="And me" data-cn="还有我">And me</span>
+          <h3 data-en="I just love playing." data-cn="我就是喜欢打球。">I just love playing.</h3>
+          <p data-en="Ping-pong, badminton, or basketball, I'm in." data-cn="乒乓、羽毛球还是篮球，我都来。">Ping-pong, badminton, or basketball, I'm in.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- music -->
+    <section class="section" id="music">
+      <div class="section__head reveal">
+        <p class="kicker" data-en="Music" data-cn="音乐">Music</p>
+        <h2 data-en="On repeat right now." data-cn="最近的单曲循环。">On repeat right now.</h2>
+        <p class="section__lead" data-en="A few favourite songs, playlists, and artists. The real Spotify embed will live here too." data-cn="一些最爱的歌曲、歌单和歌手。真正的 Spotify 播放器也会放在这里。">A few favourite songs, playlists, and artists. The real Spotify embed will live here too.</p>
+      </div>
+
+      <div class="music">
+        <div class="music__cards">
+          <article class="track reveal">
+            <span class="track__art" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+            </span>
+            <div class="track__meta">
+              <span class="track__name" data-en="Favourite song" data-cn="最爱歌曲">Favourite song</span>
+              <span class="track__by" data-en="Add your top track" data-cn="加上你的最爱单曲">Add your top track</span>
+            </div>
+          </article>
+          <article class="track reveal">
+            <span class="track__art" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+            </span>
+            <div class="track__meta">
+              <span class="track__name" data-en="Go-to playlist" data-cn="常听歌单">Go-to playlist</span>
+              <span class="track__by" data-en="Add a playlist you love" data-cn="加上你喜欢的歌单">Add a playlist you love</span>
+            </div>
+          </article>
+          <article class="track reveal">
+            <span class="track__art" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+            </span>
+            <div class="track__meta">
+              <span class="track__name" data-en="Top artist" data-cn="最爱歌手">Top artist</span>
+              <span class="track__by" data-en="Add a favourite artist" data-cn="加上你最爱的歌手">Add a favourite artist</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- swap this placeholder for a real Spotify embed iframe (see README) -->
+        <div class="spotify-slot reveal">
+          <span class="spotify-slot__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.7.7 0 0 1-1 .23c-2.6-1.6-5.9-2-9.8-1.1a.7.7 0 1 1-.3-1.36c4.2-1 7.9-.5 10.8 1.3.34.2.44.64.3 1zm1.2-2.7a.87.87 0 0 1-1.2.3c-3-1.85-7.6-2.4-11.1-1.3a.87.87 0 1 1-.5-1.67c4-1.2 9-.6 12.5 1.5.4.26.55.8.3 1.17zm.1-2.8C14.3 8.7 8.5 8.5 5.1 9.5a1.05 1.05 0 1 1-.6-2C8.4 6.3 14.8 6.5 18.7 8.8a1.05 1.05 0 0 1-1.1 1.8z"/></svg>
+          </span>
+          <p data-en="Spotify embed goes here" data-cn="这里放 Spotify 播放器">Spotify embed goes here</p>
+          <p class="spotify-slot__hint" data-en="Paste a playlist or track embed to make it live." data-cn="粘贴歌单或单曲的嵌入代码即可上线。">Paste a playlist or track embed to make it live.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- setup -->
+    <section class="section" id="setup">
+      <div class="section__head reveal">
+        <p class="kicker" data-en="My setup" data-cn="我的装备">My setup</p>
+        <h2 data-en="Everyday carry." data-cn="日常随身。">Everyday carry.</h2>
+        <p class="section__lead" data-en="The tech I use day to day. Exact models are coming soon, these are placeholders for now." data-cn="我每天用的科技产品。具体型号待补，这些先用占位。">The tech I use day to day. Exact models are coming soon, these are placeholders for now.</p>
+      </div>
+
+      <div class="setup-grid">
+        <article class="device reveal">
+          <span class="device__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+          <h3 data-en="My Phone" data-cn="我的手机">My Phone</h3>
+          <span class="device__note" data-en="Daily driver" data-cn="日常主力">Daily driver</span>
+        </article>
+        <article class="device reveal">
+          <span class="device__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span>
+          <h3 data-en="My Laptop" data-cn="我的笔记本">My Laptop</h3>
+          <span class="device__note" data-en="School &amp; everything" data-cn="学习与日常">School &amp; everything</span>
+        </article>
+        <article class="device reveal">
+          <span class="device__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M11 19h2"/></svg></span>
+          <h3 data-en="My iPad" data-cn="我的 iPad">My iPad</h3>
+          <span class="device__note" data-en="Notes &amp; watching" data-cn="记笔记与追剧">Notes &amp; watching</span>
+        </article>
+        <article class="device reveal">
+          <span class="device__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="2"/><rect x="17" y="14" width="4" height="6" rx="2"/></svg></span>
+          <h3 data-en="My Headphones" data-cn="我的耳机">My Headphones</h3>
+          <span class="device__note" data-en="AirPods on repeat" data-cn="AirPods 常驻">AirPods on repeat</span>
+        </article>
+        <article class="device reveal">
+          <span class="device__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/></svg></span>
+          <h3 data-en="Keyboard &amp; Mouse" data-cn="键盘与鼠标">Keyboard &amp; Mouse</h3>
+          <span class="device__note" data-en="Desk setup" data-cn="桌面配置">Desk setup</span>
+        </article>
+        <article class="device reveal">
+          <span class="device__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8V6a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2"/><rect x="4" y="8" width="16" height="13" rx="3"/><path d="M9 8v-2a3 3 0 0 1 6 0v2"/></svg></span>
+          <h3 data-en="Backpack" data-cn="背包">Backpack</h3>
+          <span class="device__note" data-en="Carries it all" data-cn="装下一切">Carries it all</span>
+        </article>
+        <article class="device device--apps reveal">
+          <span class="device__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span>
+          <h3 data-en="Daily Apps" data-cn="日常 App">Daily Apps</h3>
+          <span class="device__note" data-en="Maps, music, chats" data-cn="地图、音乐、聊天">Maps, music, chats</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- photos -->
+    <section class="section" id="photos">
+      <div class="section__head reveal">
+        <p class="kicker" data-en="Photos" data-cn="照片">Photos</p>
+        <h2 data-en="A few moments." data-cn="一些瞬间。">A few moments.</h2>
+        <p class="section__lead" data-en="Placeholders for now. Real trip and food photos are going in here soon." data-cn="目前是占位图。旅行和美食的真实照片很快放进来。">Placeholders for now. Real trip and food photos are going in here soon.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="ph ph--1 reveal"><span data-en="Road trip" data-cn="公路旅行">Road trip</span></figure>
+        <figure class="ph ph--2 reveal"><span data-en="Nanjing" data-cn="南京">Nanjing</span></figure>
+        <figure class="ph ph--3 reveal"><span data-en="Food" data-cn="美食">Food</span></figure>
+        <figure class="ph ph--4 reveal"><span data-en="Toronto" data-cn="多伦多">Toronto</span></figure>
+        <figure class="ph ph--5 reveal"><span data-en="Friends" data-cn="朋友">Friends</span></figure>
+        <figure class="ph ph--6 reveal"><span data-en="On the road" data-cn="在路上">On the road</span></figure>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <section class="section" id="faq">
+      <div class="section__head reveal">
+        <p class="kicker" data-en="FAQ" data-cn="问答">FAQ</p>
+        <h2 data-en="A few quick answers." data-cn="几个简单的回答。">A few quick answers.</h2>
+      </div>
+
+      <div class="faq reveal">
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span data-en="Where are you from?" data-cn="你来自哪里？">Where are you from?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p data-en="I grew up in Nanjing, China, and now I live in the Toronto and Markham area in Canada." data-cn="我在中国南京长大，现在住在加拿大多伦多和万锦一带。">I grew up in Nanjing, China, and now I live in the Toronto and Markham area in Canada.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span data-en="What do you do for fun?" data-cn="你平时玩什么？">What do you do for fun?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p data-en="Road trips, trying new food, and playing basketball, badminton, and table tennis with friends." data-cn="公路旅行、尝新美食，还有和朋友打篮球、羽毛球和乒乓球。">Road trips, trying new food, and playing basketball, badminton, and table tennis with friends.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span data-en="Why history?" data-cn="为什么喜欢历史？">Why history?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p data-en="I love seeing how the past still shapes the present. It makes travelling and meeting people way more interesting." data-cn="我喜欢看过去如何影响着现在。这让旅行和认识新朋友更有意思。">I love seeing how the past still shapes the present. It makes travelling and meeting people way more interesting.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span data-en="What languages do you speak?" data-cn="你会说什么语言？">What languages do you speak?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p data-en="English and Mandarin." data-cn="英语和中文。">English and Mandarin.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span data-en="What's your handle?" data-cn="你的用户名是？">What's your handle?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><p data-en="gswsniper30 on most platforms." data-cn="大多数平台上是 gswsniper30。">gswsniper30 on most platforms.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="section" id="contact">
+      <div class="contact reveal">
+        <p class="kicker" data-en="Contact" data-cn="联系">Contact</p>
+        <h2 data-en="Let's talk." data-cn="聊聊吧。">Let's talk.</h2>
+        <p class="section__lead" data-en="Want to chat history, sports, or a road trip? Reach out." data-cn="想聊历史、运动，或一次公路旅行？随时找我。">Want to chat history, sports, or a road trip? Reach out.</p>
+
+        <div class="contact__rows">
+          <a class="crow" href="mailto:hello@example.com">
+            <span class="crow__label" data-en="Email" data-cn="邮箱">Email</span>
+            <span class="crow__value">hello@example.com</span>
+            <span class="crow__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="crow" href="https://instagram.com/gswsniper30" target="_blank" rel="noopener">
+            <span class="crow__label" data-en="Instagram" data-cn="Instagram">Instagram</span>
+            <span class="crow__value">@gswsniper30</span>
+            <span class="crow__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <button class="crow" type="button" data-copy="gswsniper30">
+            <span class="crow__label" data-en="Handle" data-cn="用户名">Handle</span>
+            <span class="crow__value">gswsniper30</span>
+            <span class="crow__arrow" data-en="Copy" data-cn="复制">Copy</span>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script defer src="script.js?v=r3"></script>
+  <footer class="footer">
+    <span>mikey / gswsniper30</span>
+    <span class="footer__mid" data-en="Made with curiosity, 2026" data-cn="用好奇心打造，2026">Made with curiosity, 2026</span>
+    <span class="clock" data-time>--:-- ET</span>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
